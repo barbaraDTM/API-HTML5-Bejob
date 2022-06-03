@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+</head>
+<body>
+    <h1>Actividad Modulo 4: API's HTML5</h1>
+    <input type="file" id="file" name="files" accept="video/*" />
+    <output id="list"></output>
+    <p></p>
+    <div>
+        <video  width="320" height="240" type=".mp4" id="video"> 
+            <source src="video.mp4" type="video/mp4">
+            <source src="video.ogg" type="video/ogg">
+            <source src="video.webm" type="video/webm"> 
+        </video>
+    </div>
+    <div_1  id="video">
+        <button onclick="document.getElementById('video').play();">Reproducir</button>
+        <button onclick="document.getElementById('video').pause();">Pausa</button>
+        <button onclick="document.getElementById('video').volume += 0.1;">Subir Volumen</button>
+        <button onclick="document.getElementById('video').volume -= 0.1;">Bajar Volumen</button>
+    </div_1>
+    <script>
+        if (window.File && window.FileReader && window.FileList && window.Blob) {
+               // El navegador es apto.
+        } else {
+            alert('The File APIs are not fully supported in this browser.');
+            }
+
+            var video = document.getElementById("video");
+            function play(){
+                if(video.paused)
+                    video.play();
+                else
+                    video.pause();
+                }
+
+            function pause(){
+                video.pause();
+                video.currenTime = 0;
+            }
+
+         alert("El video está cargando. Espere, por favor.");
+
+
+    </script>
+</body>
+</html>
